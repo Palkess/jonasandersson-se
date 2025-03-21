@@ -1,12 +1,12 @@
 {
-	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!",
+    "$schema": "https://inlang.com/schema/inlang-message-format",
+    "hello_world": "Hello, {name} from en!",
 
-	"page_sub_title": "Fullstack web developer | Svelte, Angular, Vue | Accessibility through and through",
-	"profile_img_alt": "Image of Jonas with short hair, medium-long full beard and a green shirt.",
+    "page_sub_title": "Fullstack web developer | Svelte, Angular, Vue | Accessibility through and through",
+    "profile_img_alt": "Image of Jonas with short hair, medium-long full beard and a green shirt.",
 
-	"navigation_home": "Home",
-	"navigation_about": "Who is Jonas?",
-	"navigation_portfolio": "Portfolio",
-	"navigation_blog": "Blog"
+    "navigation_home": "Home",
+    "navigation_about": "Who is Jonas?",
+    "navigation_portfolio": "Portfolio",
+    "navigation_blog": "Blog"
 }
