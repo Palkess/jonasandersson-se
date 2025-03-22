@@ -7,6 +7,16 @@
 }
 
 @layer base {
+    .view-transition-pageTitle {
+        view-transition-name: page-title;
+    }
+    .view-transition-profileImg {
+        view-transition-name: profile-image;
+    }
+    .view-transition-topMenu {
+        view-transition-name: top-menu;
+    }
+
     html {
         height: 100%;
     }

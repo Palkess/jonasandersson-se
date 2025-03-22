@@ -3,7 +3,7 @@
     import { ParaglideJS } from '@inlang/paraglide-sveltekit';
     import '../app.css';
     import type { AvailableLanguageTag } from '$lib/paraglide/runtime';
-    import { goto } from '$app/navigation';
+    import { goto, onNavigate } from '$app/navigation';
     import { page } from '$app/state';
     let { children } = $props();
     import FlagSwedenIcon from '$lib/components/foundation/icons/FlagSwedenIcon.svelte';
@@ -14,9 +14,20 @@
         const localisedPath = i18n.resolveRoute(canonicalPath, newLanguage);
         goto(localisedPath);
     }
+
+    onNavigate((navigation) => {
+        if (!document.startViewTransition) return;
+
+        return new Promise((resolve) => {
+            document.startViewTransition(async () => {
+                resolve();
+                await navigation.complete;
+            });
+        });
+    });
 </script>
 
-<div class="container mx-auto mt-2 flex items-center justify-end gap-4">
+<div class="view-transition-topMenu container mx-auto mt-2 flex items-center justify-end gap-4">
     <button class="flex gap-2" onclick={() => switchToLanguage('en')}><FlagBritainIcon />en</button>
     <button class="flex gap-2" onclick={() => switchToLanguage('sv')}><FlagSwedenIcon /> sv</button>
 </div>

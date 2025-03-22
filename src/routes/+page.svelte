@@ -6,13 +6,13 @@
 </script>
 
 <main class="flex h-full flex-col items-center justify-center p-2">
-    <h1 class="mb-3">Jonas Andersson</h1>
+    <h1 class="view-transition-pageTitle mb-3">Jonas Andersson</h1>
     <span class="text-xl">{m.page_sub_title()}</span>
 
     <div class="mt-8">
         <button aria-label="Visa menyn" onclick={() => (showMenu = !showMenu)}>
             <img
-                class="aspect-square w-52 rounded-full border-2 object-cover p-2"
+                class="view-transition-profileImg aspect-square w-52 rounded-full border-2 object-cover p-2"
                 src={profileImg}
                 alt={m.profile_img_alt()} />
         </button>

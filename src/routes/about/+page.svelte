@@ -14,7 +14,7 @@
         <SubPage class="mb-8">
             <div class="flex items-start gap-4">
                 <img
-                    class="aspect-square w-52 shrink-0 rounded-full border-2 object-cover p-2"
+                    class="view-transition-profileImg aspect-square w-52 shrink-0 rounded-full border-2 object-cover p-2"
                     src={profileImg}
                     alt={m.profile_img_alt()} />
                 <div>
