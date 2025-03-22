@@ -7,7 +7,9 @@
     import Paper from '$lib/components/base/paper/paper.svelte';
     import SwedishHistory from './swedish-history.svelte';
     import EnglishHistory from './english-history.svelte';
-    import ExpertiseList from '$lib/components/base/expertise-list/expertise-list.svelte';
+    import SkillsList from '$lib/components/base/skills-list/skills-list.svelte';
+
+    const skills: string[] = ['Svelte', 'Typescript', 'Angular', 'Vue', 'Node', '.NET'];
 </script>
 
 <main class="flex h-full flex-col items-center justify-center p-2">
@@ -26,7 +28,7 @@
                         {m.about_summary()}
                     </p>
                     <span class="text-lg font-medium">{m.about_skills()}:</span>
-                    <ExpertiseList />
+                    <SkillsList {skills} />
                 </div>
             </div>
         </SubPage>

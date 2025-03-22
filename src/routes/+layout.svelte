@@ -33,7 +33,7 @@
     });
 </script>
 
-<div class="view-transition-topMenu container mx-auto mt-2 flex items-center justify-end gap-4">
+<div class="view-transition-topMenu container mx-auto flex items-center justify-end gap-4">
     <button
         class="{activeLanguage === 'en' ? 'border-b-2' : 'mb-0.5'} flex gap-2 rounded pb-2"
         onclick={() => switchToLanguage('en')}>
