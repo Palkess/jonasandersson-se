@@ -3,11 +3,14 @@
     import { ParaglideJS } from '@inlang/paraglide-sveltekit';
     import '../app.css';
     import type { AvailableLanguageTag } from '$lib/paraglide/runtime';
-    import { goto, onNavigate } from '$app/navigation';
+    import { afterNavigate, goto, onNavigate } from '$app/navigation';
     import { page } from '$app/state';
     let { children } = $props();
     import FlagSwedenIcon from '$lib/components/foundation/icons/FlagSwedenIcon.svelte';
     import FlagBritainIcon from '$lib/components/foundation/icons/FlagBritainIcon.svelte';
+    import { languageTag } from '$lib/paraglide/runtime.js';
+
+    let activeLanguage = $state(languageTag());
 
     function switchToLanguage(newLanguage: AvailableLanguageTag) {
         const canonicalPath = i18n.route(page.url.pathname);
@@ -25,11 +28,22 @@
             });
         });
     });
+    afterNavigate(() => {
+        activeLanguage = languageTag();
+    });
 </script>
 
 <div class="view-transition-topMenu container mx-auto mt-2 flex items-center justify-end gap-4">
-    <button class="flex gap-2" onclick={() => switchToLanguage('en')}><FlagBritainIcon />en</button>
-    <button class="flex gap-2" onclick={() => switchToLanguage('sv')}><FlagSwedenIcon /> sv</button>
+    <button
+        class="{activeLanguage === 'en' ? 'border-b-2' : 'mb-0.5'} flex gap-2 rounded pb-2"
+        onclick={() => switchToLanguage('en')}>
+        <FlagBritainIcon />en
+    </button>
+    <button
+        class="{activeLanguage === 'sv' ? 'border-b-2' : 'mb-0.5'} flex gap-2 rounded pb-2"
+        onclick={() => switchToLanguage('sv')}>
+        <FlagSwedenIcon /> sv
+    </button>
 </div>
 
 <ParaglideJS {i18n}>

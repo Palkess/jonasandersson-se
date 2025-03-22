@@ -9,5 +9,8 @@
     "navigation_about": "Vem är jag?",
     "navigation_portfolio": "Portfolio",
     "navigation_blog": "Blogg",
-    "navigation_back": "Gå tillbaka"
+    "navigation_back": "Gå tillbaka",
+
+    "about_summary": "Hej, mitt namn är Jonas 👋 Jag är en fullstack webbutvecklare från Öland/Kalmar som har en passion för att ta fram smarta, smidiga och snygga webblösningar. Efter många år inom IT-branschen och med en bred kompetens inom hela utvecklingsprocessen från design till produktion, har jag en gedigen erfarenhet av att skapa webbplatser och applikationer som är användarvänliga, tilltalande och effektiva.",
+    "about_skills": "Huvudkunskaper"
 }

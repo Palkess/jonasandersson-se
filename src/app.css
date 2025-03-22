@@ -10,11 +10,20 @@
     .view-transition-pageTitle {
         view-transition-name: page-title;
     }
+    .view-transition-pageSummary {
+        view-transition-name: page-summary;
+    }
     .view-transition-profileImg {
         view-transition-name: profile-image;
     }
     .view-transition-topMenu {
         view-transition-name: top-menu;
+    }
+    .view-transition-pageContent {
+        view-transition-name: page-content;
+    }
+    .view-transition-pageContent-1 {
+        view-transition-name: page-content-1;
     }
 
     html {
