@@ -1,13 +1,20 @@
 <!doctype html>
-<html lang="%paraglide.lang%" dir="%paraglide.textDirection%">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" href="%sveltekit.assets%/favicon.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        %sveltekit.head%
-    </head>
+<html lang="%paraglide.lang%"
+      dir="%paraglide.textDirection%">
 
-    <body class="bg-navy-100 h-full text-white" data-sveltekit-preload-data="hover">
-        <div class="h-full" style="display: contents">%sveltekit.body%</div>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon"
+          href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1" />
+    %sveltekit.head%
+</head>
+
+<body class="bg-navy-100 flex flex-col justify-between h-full text-white"
+      data-sveltekit-preload-data="hover">
+    <div class="h-full"
+         style="display: contents">%sveltekit.body%</div>
+</body>
+
 </html>
