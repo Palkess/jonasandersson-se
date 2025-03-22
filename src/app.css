@@ -28,3 +28,20 @@
         }
     }
 }
+
+@layer components {
+    .bg-angular {
+        background: linear-gradient(
+            90deg,
+            oklch(63.32% 0.24 31.68) 0%,
+            oklch(69.02% 0.277 332.77) 50%,
+            oklch(53.18% 0.28 296.97) 100%
+        );
+    }
+}
+
+@utility container {
+    @media (width >= theme(--breakpoint-xl)) {
+        max-width: 64rem;
+    }
+}

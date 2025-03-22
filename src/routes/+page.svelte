@@ -12,7 +12,7 @@
     <div class="mt-8">
         <button aria-label="Visa menyn" onclick={() => (showMenu = !showMenu)}>
             <img
-                class="aspect-square w-52 rounded-full"
+                class="aspect-square w-52 rounded-full border-2 object-cover p-2"
                 src={profileImg}
                 alt={m.profile_img_alt()} />
         </button>
