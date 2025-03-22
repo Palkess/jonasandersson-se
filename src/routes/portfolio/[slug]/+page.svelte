@@ -1,8 +1,11 @@
 <script lang="ts">
+    import Button from '$lib/components/base/button/button.svelte';
     import PageTitle from '$lib/components/base/page-title/page-title.svelte';
     import Paper from '$lib/components/base/paper/paper.svelte';
     import SkillsList from '$lib/components/base/skills-list/skills-list.svelte';
     import SubPage from '$lib/components/composites/sub-page/sub-page.svelte';
+    import ExternalLinkIcon from '$lib/components/foundation/icons/ExternalLinkIcon.svelte';
+    import GithubIcon from '$lib/components/foundation/icons/GithubIcon.svelte';
 
     let { data } = $props();
 
@@ -22,14 +25,39 @@
         </SubPage>
 
         <Paper>
-            <div class="flex items-center justify-between gap-4">
-                <div>
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex flex-col gap-4">
                     <h2>Kort beskrivning</h2>
+                    <p>Release: {project.releaseDate}</p>
                     <p>{project.description}</p>
-                    <SkillsList skills={project.technologies} />
+                    <SkillsList
+                        skills={project.technologies}
+                        style="view-transition-name: project-skills-{project.slug};" />
                 </div>
 
-                <a href={project.url} target="_blank">Gå till webbplatsen</a>
+                <div class="flex flex-col items-end gap-4">
+                    {#if project.status === 'public' && project.githubUrl}
+                        <Button
+                            type="link"
+                            theme="secondary"
+                            size="lg"
+                            href={project.githubUrl}
+                            target="_blank">
+                            <GithubIcon />
+                            Github
+                            <ExternalLinkIcon />
+                        </Button>
+                    {/if}
+                    <Button
+                        type="link"
+                        theme="primary"
+                        size="lg"
+                        href={project.url}
+                        target="_blank">
+                        Gå till webbplatsen
+                        <ExternalLinkIcon />
+                    </Button>
+                </div>
             </div>
         </Paper>
     </div>

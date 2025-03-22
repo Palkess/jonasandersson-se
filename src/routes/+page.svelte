@@ -9,7 +9,7 @@
 <main class="flex h-full flex-col items-center justify-center p-2">
     <h1 class="view-transition-pageTitle mb-3">Jonas Andersson</h1>
     <span class="mb-3 text-xl">{m.page_sub_title()}</span>
-    <SkillsList {skills} />
+    <SkillsList {skills} style="view-transition-name: expertise-list;" />
 
     <div class="mt-8">
         <img

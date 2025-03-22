@@ -12,7 +12,7 @@ export const load: LayoutServerLoad = async ({ cookies }) => {
             technologies: ['TypeScript', 'SvelteKit', 'Tailwind', 'MySQL', 'IIS'],
             status: 'private',
             url: 'https://olandsstuguthyrning.com',
-            releaseDate: new Date()
+            releaseDate: '2025-03-18'
         }
     ];
 

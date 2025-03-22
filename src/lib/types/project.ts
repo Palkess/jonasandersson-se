@@ -7,5 +7,5 @@ export interface Project {
     status: 'public' | 'private' | 'inprogress';
     githubUrl?: string;
     url: string;
-    releaseDate: Date;
+    releaseDate: string;
 }

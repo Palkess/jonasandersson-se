@@ -28,7 +28,7 @@
                         {m.about_summary()}
                     </p>
                     <span class="text-lg font-medium">{m.about_skills()}:</span>
-                    <SkillsList {skills} />
+                    <SkillsList {skills} style="view-transition-name: expertise-list;" />
                 </div>
             </div>
         </SubPage>

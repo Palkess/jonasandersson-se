@@ -30,7 +30,9 @@
                     class="relative mb-10 after:absolute after:-bottom-5 after:block after:h-2 after:w-3/4 after:rounded after:bg-white after:content-['']">
                     {project.title}
                 </h2>
-                <SkillsList skills={project.technologies} />
+                <SkillsList
+                    skills={project.technologies}
+                    style="view-transition-name: project-skills-{project.slug};" />
             </div>
         </div>
     </div>
