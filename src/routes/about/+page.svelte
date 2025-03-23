@@ -12,7 +12,7 @@
     const skills: string[] = ['Svelte', 'Typescript', 'Angular', 'Vue', 'Node', '.NET'];
 </script>
 
-<main class="flex h-full flex-col items-center justify-center p-2">
+<main class="flex flex-col items-center justify-center p-2">
     <div class="container">
         <PageTitle>
             {m.navigation_about()}
