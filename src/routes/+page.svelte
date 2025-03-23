@@ -7,6 +7,16 @@
     const skills: string[] = ['Svelte', 'Typescript', 'Angular', 'Vue', 'Node', '.NET'];
 </script>
 
+<svelte:head>
+    <title>
+        Jonas Andersson - Fullstack webbutvecklare | Svelte, Angular, Vue | Tillgänglighet i
+        benmärgen
+    </title>
+    <meta
+        name="description"
+        content="Välkommen in och lär känna mig, Jonas Andersson! Jag är en fullstack webbutvecklare från Öland/Kalmar som hjälper mina kunder att nå ut till sina besökare med smidiga och snygga webbsidor!" />
+</svelte:head>
+
 <main class="flex h-full flex-col items-center justify-center">
     <h1 class="view-transition-pageTitle mb-3">Jonas Andersson</h1>
     <span class="mb-3 text-xl">{m.page_sub_title()}</span>

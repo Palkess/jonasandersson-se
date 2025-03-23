@@ -12,7 +12,24 @@
     import EnglishExperience from './english-experience.svelte';
 
     const skills: string[] = ['Svelte', 'Typescript', 'Angular', 'Vue', 'Node', '.NET'];
+
+    const pageTitle =
+        languageTag() === 'sv'
+            ? 'Om mig | Jonas Andersson - Fullstack webbutvecklare | Svelte, Angular, Vue | Tillgänglighet i benmärgen'
+            : 'About me | Jonas Andersson - Fullstack web developer | Svelte, Angular, Vue | Accessibility through and through';
+
+    const pageDescription =
+        languageTag() === 'sv'
+            ? 'Jag är en fullstack webbutvecklare från Öland/Kalmar som har en passion för att ta fram smarta, smidiga och snygga webblösningar.'
+            : 'I am a fullstack web developer from Öland/Kalmar who has a passion for creating smart, smooth and stylish web solutions.';
 </script>
+
+<svelte:head>
+    <title>
+        {pageTitle}
+    </title>
+    <meta name="description" content={pageDescription} />
+</svelte:head>
 
 <main class="flex flex-col items-center justify-center p-2">
     <div class="container">

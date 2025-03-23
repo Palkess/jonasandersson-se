@@ -12,7 +12,24 @@
     let { data } = $props();
 
     let { project } = data;
+
+    const pageTitle =
+        languageTag() === 'sv'
+            ? `${project.title} | Jonas Andersson - Fullstack webbutvecklare | Svelte, Angular, Vue | Tillgänglighet i benmärgen`
+            : `${project.title} | Jonas Andersson - Fullstack web developer | Svelte, Angular, Vue | Accessibility through and through`;
+
+    const pageDescription =
+        languageTag() === 'sv'
+            ? `${project.description} | Jonas Andersson - Fullstack webbutvecklare | Svelte, Angular, Vue | Tillgänglighet i benmärgen`
+            : `${project.description} | Jonas Andersson - Fullstack web developer | Svelte, Angular, Vue | Accessibility through and through`;
 </script>
+
+<svelte:head>
+    <title>
+        {pageTitle}
+    </title>
+    <meta name="description" content={pageDescription} />
+</svelte:head>
 
 <main class="flex h-full flex-col items-center justify-center p-2">
     <div class="container">
