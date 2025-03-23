@@ -20,13 +20,13 @@
             draggable="false" />
     </div>
 
-    <nav class="mt-8 mb-4">
+    <nav class="mt-8 mb-8">
         <ul class=" flex items-center justify-center gap-8 text-xl font-medium">
             <li>
-                <a href="/about">{m.navigation_about()}</a>
+                <a class="link" href="/about">{m.navigation_about()}</a>
             </li>
             <li>
-                <a href="/portfolio">{m.navigation_portfolio()}</a>
+                <a class="link" href="/portfolio">{m.navigation_portfolio()}</a>
             </li>
         </ul>
     </nav>
