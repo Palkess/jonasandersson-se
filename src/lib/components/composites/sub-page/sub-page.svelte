@@ -15,7 +15,7 @@
 
 <Paper class={className}>
     <a
-        class="absolute -top-8 -left-8 z-30 flex aspect-square w-16 items-center justify-center rounded-full border-2 bg-black p-3 text-white"
+        class="absolute -top-8 z-30 flex aspect-square w-16 items-center justify-center rounded-full border-2 bg-black p-3 text-white"
         href={backUrl ? backUrl : '/'}
         aria-label={m.navigation_back()}>
         <MoveLeftIcon class="m-auto h-8 w-8" />

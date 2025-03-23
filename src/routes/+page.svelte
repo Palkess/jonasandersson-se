@@ -21,7 +21,7 @@
     </div>
 
     <nav class="mt-8 mb-8">
-        <ul class=" flex items-center justify-center gap-8 text-xl font-medium">
+        <ul class="flex flex-wrap items-center justify-center gap-8 text-xl font-medium">
             <li>
                 <a class="link" href="/about">{m.navigation_about()}</a>
             </li>
