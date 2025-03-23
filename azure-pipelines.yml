@@ -1,0 +1,46 @@
+trigger:
+    branches:
+        include:
+            - master
+
+pool:
+    vmImage: 'windows-latest'
+
+steps:
+    - task: UseNode@1
+      inputs:
+          version: '20.11.x'
+
+    - task: Npm@1
+      inputs:
+          command: 'install'
+          workingDir: '$(System.DefaultWorkingDirectory)'
+
+    - task: Npm@1
+      inputs:
+          command: 'custom'
+          workingDir: '$(System.DefaultWorkingDirectory)'
+          customCommand: 'run build'
+
+    - task: Npm@1
+      inputs:
+          command: 'custom'
+          workingDir: '$(System.DefaultWorkingDirectory)/.svelte-kit/adapter-iis'
+          customCommand: 'install --omit=dev'
+
+    # Zip the web  files
+    - task: ArchiveFiles@2
+      displayName: 'Zip files'
+      inputs:
+          rootFolderOrFile: '$(System.DefaultWorkingDirectory)/.svelte-kit/adapter-iis'
+          includeRootFolder: false
+          archiveType: 'zip'
+          archiveFile: '$(Build.ArtifactStagingDirectory)/Jonasandersson.zip'
+      condition: succeeded()
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact: drop'
+      inputs:
+          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+          ArtifactName: 'drop'
+          publishLocation: 'Container'
