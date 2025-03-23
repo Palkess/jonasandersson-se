@@ -27,7 +27,7 @@
             </div>
             <div class="bg-navy-100 rounded-2xl p-4 text-white">
                 <h2
-                    class="relative mb-10 after:absolute after:-bottom-5 after:block after:h-2 after:w-3/4 after:rounded after:bg-white after:content-['']">
+                    class="relative mb-10 text-xl text-wrap break-words after:absolute after:-bottom-3 after:block after:h-1 after:w-3/4 after:rounded after:bg-white after:content-[''] md:text-2xl">
                     {project.title}
                 </h2>
                 <SkillsList

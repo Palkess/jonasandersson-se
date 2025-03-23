@@ -19,7 +19,7 @@
             </p>
         </SubPage>
 
-        <ul class="grid grid-cols-2">
+        <ul class="grid grid-cols-1 lg:grid-cols-2">
             {#each data.projects as project}
                 <ProjectTeaser {project} />
             {/each}

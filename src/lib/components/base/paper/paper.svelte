@@ -12,7 +12,7 @@
 
 <div
     class={twMerge(
-        'relative w-full rounded-2xl border bg-white p-4 text-black shadow sm:p-8',
+        'relative w-full rounded-2xl border bg-white px-4 pt-8 pb-4 text-black shadow sm:p-8',
         className
     )}>
     {@render children()}
