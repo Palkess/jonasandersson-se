@@ -14,7 +14,9 @@
         </PageTitle>
 
         <SubPage class=" mb-8">
-            <p>wdaawd</p>
+            <p class="text-lg">
+                {m.portfolio_read_about()}
+            </p>
         </SubPage>
 
         <ul class="grid grid-cols-2">

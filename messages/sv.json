@@ -12,5 +12,9 @@
     "navigation_back": "Gå tillbaka",
 
     "about_summary": "Hej, mitt namn är Jonas 👋 Jag är en fullstack webbutvecklare från Öland/Kalmar som har en passion för att ta fram smarta, smidiga och snygga webblösningar. Efter många år inom IT-branschen och med en bred kompetens inom hela utvecklingsprocessen från design till produktion, har jag en gedigen erfarenhet av att skapa webbplatser och applikationer som är användarvänliga, tilltalande och effektiva.",
-    "about_skills": "Huvudkunskaper"
+    "about_skills": "Huvudkunskaper",
+
+    "portfolio_used_tech": "Använda tekniker",
+    "portfolio_goto_webpage": "Gå till webbplatsen",
+    "portfolio_read_about": "Här kan ni läsa om några av dom projekt som jag har varit med och utvecklat."
 }

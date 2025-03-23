@@ -6,6 +6,8 @@
     import SubPage from '$lib/components/composites/sub-page/sub-page.svelte';
     import ExternalLinkIcon from '$lib/components/foundation/icons/ExternalLinkIcon.svelte';
     import GithubIcon from '$lib/components/foundation/icons/GithubIcon.svelte';
+    import * as m from '$lib/paraglide/messages.js';
+    import { languageTag } from '$lib/paraglide/runtime';
 
     let { data } = $props();
 
@@ -14,7 +16,13 @@
 
 <main class="flex h-full flex-col items-center justify-center p-2">
     <div class="container">
-        <PageTitle>{project.title}</PageTitle>
+        <PageTitle>
+            {#if languageTag() === 'sv'}
+                {project.title}
+            {:else}
+                {project.translations.en.title}
+            {/if}
+        </PageTitle>
 
         <SubPage class="relative mb-8 aspect-video w-full" backUrl="/portfolio">
             <img
@@ -25,39 +33,45 @@
         </SubPage>
 
         <Paper>
-            <div class="flex flex-wrap items-center justify-between gap-4">
-                <div class="flex flex-col gap-4">
-                    <h2>Kort beskrivning</h2>
-                    <p>Release: {project.releaseDate}</p>
-                    <p>{project.description}</p>
-                    <SkillsList
-                        skills={project.technologies}
-                        style="view-transition-name: project-skills-{project.slug};" />
-                </div>
-
-                <div class="flex flex-col items-end gap-4">
-                    {#if project.status === 'public' && project.githubUrl}
-                        <Button
-                            type="link"
-                            theme="secondary"
-                            size="lg"
-                            href={project.githubUrl}
-                            target="_blank">
-                            <GithubIcon />
-                            Github
-                            <ExternalLinkIcon />
-                        </Button>
+            <div class="mb-4 flex flex-col gap-4">
+                <h2>
+                    {#if languageTag() === 'sv'}
+                        {project.descriptionTitle}
+                    {:else}
+                        {project.translations.en.descriptionTitle}
                     {/if}
+                </h2>
+                <p>Release: {project.releaseDate}</p>
+                <p>
+                    {#if languageTag() === 'sv'}
+                        {project.description}
+                    {:else}
+                        {project.translations.en.description}
+                    {/if}
+                </p>
+                <h3 class="text-lg font-medium">{m.portfolio_used_tech()}</h3>
+                <SkillsList
+                    skills={project.technologies}
+                    style="view-transition-name: project-skills-{project.slug};" />
+            </div>
+
+            <div class="flex justify-end gap-4">
+                {#if project.status === 'public' && project.githubUrl}
                     <Button
                         type="link"
-                        theme="primary"
+                        theme="secondary"
                         size="lg"
-                        href={project.url}
+                        href={project.githubUrl}
                         target="_blank">
-                        Gå till webbplatsen
+                        <GithubIcon />
+                        Github
                         <ExternalLinkIcon />
                     </Button>
-                </div>
+                {/if}
+                <Button type="link" theme="primary" size="lg" href={project.url} target="_blank">
+                    {m.portfolio_goto_webpage()}
+                    <ExternalLinkIcon />
+                </Button>
             </div>
         </Paper>
     </div>
