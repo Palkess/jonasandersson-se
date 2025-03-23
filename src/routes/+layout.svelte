@@ -60,7 +60,7 @@
 
 <footer>
     <div class="container mx-auto mt-8">
-        <p class="text-center text-sm text-gray-500">
+        <p class="text-center text-sm">
             Copyright © {new Date().getFullYear()} Jonas Andersson
         </p>
     </div>
