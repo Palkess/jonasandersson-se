@@ -59,7 +59,7 @@
 </ParaglideJS>
 
 <footer>
-    <div class="container mx-auto mt-8">
+    <div class="container mx-auto my-8">
         <p class="text-center text-sm">
             Copyright © {new Date().getFullYear()} Jonas Andersson
         </p>
