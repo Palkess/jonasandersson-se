@@ -11,7 +11,7 @@ const config = {
         adapter: IISAdapter({
             origin: 'https://jonasandersson.se',
             iisNodeOptions: {
-                nodeProcessCommandLine: 'C:/Program Files/nodejs/20.11.0/node.exe'
+                nodeProcessCommandLine: 'C:/Program Files/nodejs/node.exe'
             },
             redirectToHttps: true
         })
